@@ -67,6 +67,7 @@ export const {
   signIn,
   signOut
 } = NextAuth(() => ({
+  debug: true,
   secret: process.env.AUTH_SECRET,
   adapter: DrizzleAdapter(createDb(), {
     usersTable: users,
